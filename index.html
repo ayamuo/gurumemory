@@ -58,6 +58,17 @@
   ul.features span { display: block; color: var(--sub); font-size: 14px; margin-top: 2px; }
   .privacy p { color: var(--sub); font-size: 14.5px; margin-bottom: 10px; }
   .privacy strong { color: var(--text); }
+  .shots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 18px;
+  }
+  .shots figure { margin: 0; text-align: center; }
+  .shots img {
+    width: 100%; height: auto; display: block;
+    border: 1px solid var(--line); border-radius: 12px; background: #fff;
+  }
+  .shots figcaption { margin-top: 8px; font-size: 13px; color: var(--sub); }
   .links { display: flex; flex-wrap: wrap; gap: 12px; }
   .links a {
     color: var(--accent); text-decoration: none; font-weight: 600;
@@ -91,7 +102,22 @@
       <li><b>振り返り</b><span>カレンダー・検索・お気に入りで、過去の記録をかんたんに探せる。</span></li>
       <li><b>シェア</b><span>記録をカード画像にしてSNSへ。共有画像に位置情報は載せません。</span></li>
       <li><b>バックアップ／復元</b><span>記録をまとめてファイルに書き出し、機種変更時に取り込めます。</span></li>
+      <li><b>広告は買い切りで非表示に（任意）</b><span>応援として一度購入すると広告が消えます。全機能は無料のまま。支払いはGoogle Playが処理し、支払い情報がアプリに渡ることはありません。</span></li>
     </ul>
+  </section>
+
+  <section>
+    <h2>画面紹介</h2>
+    <div class="shots">
+      <figure><img src="shots/kiroku.jpg" alt="記録一覧の画面" loading="lazy"><figcaption>記録を一覧で</figcaption></figure>
+      <figure><img src="shots/henshu.jpg" alt="記録の追加・編集画面" loading="lazy"><figcaption>かんたんに記録</figcaption></figure>
+      <figure><img src="shots/shousai1.jpg" alt="記録の詳細画面" loading="lazy"><figcaption>記録の詳細</figcaption></figure>
+      <figure><img src="shots/shousai2.jpg" alt="複数写真を表示する詳細画面" loading="lazy"><figcaption>写真は複数枚まとめて</figcaption></figure>
+      <figure><img src="shots/library_pic.jpg" alt="ライブラリから複数選択する画面" loading="lazy"><figcaption>ライブラリから複数選択</figcaption></figure>
+      <figure><img src="shots/calendar.jpg" alt="カレンダー画面" loading="lazy"><figcaption>カレンダーで振り返り</figcaption></figure>
+      <figure><img src="shots/map.jpg" alt="マップ画面" loading="lazy"><figcaption>地図にピン</figcaption></figure>
+      <figure><img src="shots/toukei.jpg" alt="統計画面" loading="lazy"><figcaption>統計で傾向を見る</figcaption></figure>
+    </div>
   </section>
 
   <section class="privacy">
