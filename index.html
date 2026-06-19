@@ -91,6 +91,18 @@
     border: 1px solid var(--accent); border-radius: 8px;
     padding: 10px 16px; font-size: 14px;
   }
+  .qr-wrap {
+    display: flex; gap: 32px; flex-wrap: wrap;
+  }
+  .qr-item {
+    text-align: center;
+  }
+  .qr-item img {
+    width: 160px; height: 160px; display: block;
+  }
+  .qr-item figcaption {
+    margin-top: 8px; font-size: 13px; color: var(--sub);
+  }
   footer {
     text-align: center; color: #999; font-size: 12px;
     padding: 28px 0 40px;
@@ -105,7 +117,6 @@
   <h1>ぐるめもりー</h1>
   <p class="tagline">食べたものを、写真とともに。<br>データは端末の中だけ。完全オフラインの食事記録アプリ。</p>
   <a class="cta" href="https://play.google.com/store/apps/details?id=com.gurumemory.gurumemory&amp;hl=ja">Google Play で入手</a>
-  <p class="status">※現在クローズドテスト中です。一般公開後に、上記リンクからどなたでも入手できるようになります。</p>
 </header>
 
 <main class="wrap">
@@ -141,6 +152,16 @@
     <p><strong>記録・写真・評価・メモ・位置は、すべて端末内にのみ保存されます。</strong>クラウド送信・同期・アカウント登録はありません。</p>
     <p>位置情報は「写真のEXIFから読む」または「地図で手動指定」のみで、端末GPSは使いません。端末に保存する写真とシェア画像からは、位置情報（EXIF）を取り除きます。</p>
     <p>外部との通信は、広告の表示（AdMob）と地図タイルの取得（OpenStreetMap）に限られます。あなたの食事記録そのものが外部へ送られることはありません。</p>
+  </section>
+
+  <section>
+    <h2>QRコード</h2>
+    <div class="qr-wrap">
+      <figure class="qr-item">
+        <img src="QR_googleplay.png" alt="Google Play QRコード">
+        <figcaption>Google Play</figcaption>
+      </figure>
+    </div>
   </section>
 
   <section>
