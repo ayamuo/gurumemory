@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="vu92TGdy4IrOGzrJV-RdeNZjV0SZYJa_1VZ04k_OwO4" />
+<title>ぐるめもりー｜完全オフラインの食事記録アプリ</title>
+<meta name="description" content="ぐるめもりーは、食事を写真とともに端末内に記録する完全オフラインの食事記録アプリです。データは端末から外に出ません。">
+<link rel="canonical" href="https://ayamuo.github.io/gurumemory/">
+<!-- OGP / Twitter Card（SNSやチャットでURLを貼ったときのプレビュー用） -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ぐるめもりー">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://ayamuo.github.io/gurumemory/">
+<meta property="og:title" content="ぐるめもりー｜完全オフラインの食事記録アプリ">
+<meta property="og:description" content="食べたものを、写真とともに。データは端末の中だけ。完全オフラインの食事記録アプリ。">
+<meta property="og:image" content="https://ayamuo.github.io/gurumemory/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="586">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ぐるめもりー｜完全オフラインの食事記録アプリ">
+<meta name="twitter:description" content="食べたものを、写真とともに。データは端末の中だけ。完全オフラインの食事記録アプリ。">
+<meta name="twitter:image" content="https://ayamuo.github.io/gurumemory/ogp.jpg">
+<style>
+  :root {
+    --accent: #FF8C00;
+    --text: #333333;
+    --sub: #666666;
+    --line: #EEEEEE;
+    --bg: #FFFFFF;
+    --bg-soft: #FFF7EF;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  header {
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--line);
+    padding: 56px 0 48px;
+    text-align: center;
+  }
+  header img.icon {
+    width: 84px; height: 84px; border-radius: 18px;
+    display: block; margin: 0 auto 18px;
+  }
+  header h1 { font-size: 28px; color: var(--accent); letter-spacing: 0.02em; }
+  header p.tagline { margin-top: 10px; font-size: 15px; color: var(--sub); }
+  .cta {
+    display: inline-block; margin-top: 24px;
+    background: var(--accent); color: #fff; text-decoration: none;
+    font-weight: 700; font-size: 15px;
+    padding: 12px 28px; border-radius: 10px;
+  }
+  .status {
+    margin-top: 14px; font-size: 13px; color: var(--sub);
+    line-height: 1.6;
+  }
+  section { padding: 44px 0; border-bottom: 1px solid var(--line); }
+  section h2 {
+    font-size: 19px; margin-bottom: 20px;
+    padding-left: 12px; border-left: 4px solid var(--accent);
+  }
+  ul.features { list-style: none; }
+  ul.features li {
+    padding: 12px 0; border-bottom: 1px solid var(--line);
+  }
+  ul.features li:last-child { border-bottom: none; }
+  ul.features b { color: var(--text); }
+  ul.features span { display: block; color: var(--sub); font-size: 14px; margin-top: 2px; }
+  .privacy p { color: var(--sub); font-size: 14.5px; margin-bottom: 10px; }
+  .privacy strong { color: var(--text); }
+  .shots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 18px;
+  }
+  .shots figure { margin: 0; text-align: center; }
+  .shots img {
+    width: 100%; height: auto; display: block;
+    border: 1px solid var(--line); border-radius: 12px; background: #fff;
+  }
+  .shots figcaption { margin-top: 8px; font-size: 13px; color: var(--sub); }
+  .links { display: flex; flex-wrap: wrap; gap: 12px; }
+  .links a {
+    color: var(--accent); text-decoration: none; font-weight: 600;
+    border: 1px solid var(--accent); border-radius: 8px;
+    padding: 10px 16px; font-size: 14px;
+  }
+  .qr-wrap {
+    display: flex; gap: 32px; flex-wrap: wrap;
+  }
+  .qr-item {
+    text-align: center;
+  }
+  .qr-item img {
+    width: 160px; height: 160px; display: block;
+  }
+  .qr-item figcaption {
+    margin-top: 8px; font-size: 13px; color: var(--sub);
+  }
+  footer {
+    text-align: center; color: #999; font-size: 12px;
+    padding: 28px 0 40px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <!-- アプリアイコンを使う場合は app_icon.png をこのリポジトリに置く。不要なら次の img 行を削除 -->
+  <img class="icon" src="app_icon.png" alt="ぐるめもりー アイコン" onerror="this.style.display='none'">
+  <h1>ぐるめもりー</h1>
+  <p class="tagline">食べたものを、写真とともに。<br>データは端末の中だけ。完全オフラインの食事記録アプリ。</p>
+  <a class="cta" href="https://play.google.com/store/apps/details?id=com.gurumemory.gurumemory&amp;hl=ja">Google Play で入手</a>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <h2>できること</h2>
+    <ul class="features">
+      <li><b>写真で記録</b><span>料理名・評価・店名・メモ・タグを、写真と一緒に残す。</span></li>
+      <li><b>地図にピン</b><span>撮影場所を自動で地図に表示。位置情報は端末内にのみ保存されます。</span></li>
+      <li><b>振り返り</b><span>カレンダー・検索・お気に入りで、過去の記録をかんたんに探せる。</span></li>
+      <li><b>シェア</b><span>記録をカード画像にしてSNSへ。共有画像に位置情報は載せません。</span></li>
+      <li><b>バックアップ／復元</b><span>記録をまとめてファイルに書き出し、機種変更時に取り込めます。</span></li>
+      <li><b>広告は買い切りで非表示に（任意）</b><span>応援として一度購入すると広告が消えます。全機能は無料のまま。支払いはGoogle Playが処理し、支払い情報がアプリに渡ることはありません。</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>画面紹介</h2>
+    <div class="shots">
+      <figure><img src="shots/kiroku.jpg" alt="記録一覧の画面" loading="lazy"><figcaption>記録を一覧で</figcaption></figure>
+      <figure><img src="shots/henshu.jpg" alt="記録の追加・編集画面" loading="lazy"><figcaption>かんたんに記録</figcaption></figure>
+      <figure><img src="shots/shousai1.jpg" alt="記録の詳細画面" loading="lazy"><figcaption>記録の詳細</figcaption></figure>
+      <figure><img src="shots/shousai2.jpg" alt="複数写真を表示する詳細画面" loading="lazy"><figcaption>写真は複数枚まとめて</figcaption></figure>
+      <figure><img src="shots/library_pic.jpg" alt="ライブラリから複数選択する画面" loading="lazy"><figcaption>ライブラリから複数選択</figcaption></figure>
+      <figure><img src="shots/calendar.jpg" alt="カレンダー画面" loading="lazy"><figcaption>カレンダーで振り返り</figcaption></figure>
+      <figure><img src="shots/map.jpg" alt="マップ画面" loading="lazy"><figcaption>地図にピン</figcaption></figure>
+      <figure><img src="shots/toukei.jpg" alt="統計画面" loading="lazy"><figcaption>統計で傾向を見る</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="privacy">
+    <h2>プライバシー</h2>
+    <p><strong>記録・写真・評価・メモ・位置は、すべて端末内にのみ保存されます。</strong>クラウド送信・同期・アカウント登録はありません。</p>
+    <p>位置情報は「カメラ撮影時の端末GPS」「写真のEXIFから読み取り」「地図で手動指定」のいずれかで記録され、端末内にのみ保存されます。測位のための外部通信は行いません。端末に保存する写真とシェア画像からは、位置情報（EXIF）を取り除きます。</p>
+    <p>外部との通信は、広告の表示（AdMob）と地図タイルの取得（OpenStreetMap）に限られます。あなたの食事記録そのものが外部へ送られることはありません。</p>
+  </section>
+
+  <section>
+    <h2>QRコード</h2>
+    <div class="qr-wrap">
+      <figure class="qr-item">
+        <img src="QR_googleplay.png" alt="Google Play QRコード">
+        <figcaption>Google Play</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>リンク</h2>
+    <div class="links">
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="mailto:ayamuo.apps@proton.me">お問い合わせ</a>
+      <a href="https://play.google.com/store/apps/details?id=com.gurumemory.gurumemory&amp;hl=ja">Google Play</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; ぐるめもりー
+</footer>
+
+</body>
+</html>
